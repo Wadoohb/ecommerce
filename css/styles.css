@@ -1,0 +1,181 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #f5f5f5;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.nombre-sitio{
+    text-align: center;
+    font-size: 5rem;
+    margin: 3rem 0;
+}
+
+.nombre-sitio span{
+    color: #037bc0;
+}
+
+/* Navegación */
+
+.contenedor-navegacion{
+    background-color: #037bc0;
+}
+
+#menu-btn{
+    width: 100%;
+    border: none;
+    background-color: #037bc0;
+    color: white;
+    padding: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-principal{
+    display: none;
+}
+
+.nav-principal.activo{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-principal a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+    transition: all .3s ease;
+}
+
+.nav-principal a:hover{
+    background-color: white;
+    color: #037bc0;
+    border-radius: .5rem;
+    transform: translateY(-3px);
+}
+
+/* Banner */
+
+.banner{
+    background-image: url("../imagenes/principal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+    position: relative;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.55);
+}
+
+.contenido-banner{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.contenido-banner h2{
+    font-size: 5rem;
+    text-shadow: 0 0 10px rgba(0,0,0,.8);
+}
+
+.contenido-banner p{
+    font-size: 2.5rem;
+}
+
+/* Botones */
+
+button{
+    padding: 1.2rem 2.5rem;
+    margin: 1rem;
+    border: none;
+    border-radius: .8rem;
+    background-color: #037bc0;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+button:hover{
+    background-color: #025a8f;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(3,123,192,.5);
+}
+
+/* Secciones */
+
+section{
+    background-color: white;
+    padding: 3rem;
+    margin: 3rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
+
+h2{
+    text-align: center;
+    font-size: 4rem;
+}
+
+p{
+    line-height: 1.8;
+}
+
+/* Footer */
+
+footer{
+    background-color: #037bc0;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive */
+
+@media (min-width: 768px){
+
+    #menu-btn{
+        display: none;
+    }
+
+    .nav-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
